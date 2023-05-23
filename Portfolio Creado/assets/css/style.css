@@ -946,3 +946,21 @@ section {
 b {
   color: red;
 }
+
+#enviar {
+	background: #B9DFFF;
+	color: #fff;
+  height: 50%;
+  width: 30%;
+	border: 2px solid #eee;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}
+
+#enviar:hover {
+	background: #016ABC;
+	color: #fff;
+	border: 2px solid #eee;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}
