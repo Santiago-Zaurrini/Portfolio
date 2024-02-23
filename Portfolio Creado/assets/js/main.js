@@ -1,62 +1,3 @@
-const form = document.getElementsByTagName("form")[0];
-form.addEventListener('submit', (evento) => {
-    evento.preventDefault();
-    let valid = true;
-    
-    const errors = Array.from(document.getElementsByTagName("b"));
-    errors.forEach((error) => {
-    error.remove();
-    })  
-    
-    const Nombre = document.getElementById('name');
-
-    if( Nombre.value.trim() === '')
-    {
-    const error = document.createElement('b');
-    error.innerText = "Ingrese su nombre";
-    Nombre.insertAdjacentElement("afterend", error);
-    valid = false;
-    }
-
-    const Email = document.getElementById('email');
-
-    if(Email.value.trim() === ''){
-    const error = document.createElement('b');
-    error.innerText = "Ingrese su mail";
-    Email.insertAdjacentElement("afterend", error);
-    valid = false;
-    }
-
-    const Asunto = document.getElementById('subject');
-
-    if(Asunto.value.trim() === ''){
-    const error = document.createElement('b');
-    error.innerText = "Ingrese un asunto";
-    Asunto.insertAdjacentElement("afterend", error);
-    valid = false;
-    }
-
-    const Mensaje = document.getElementById('message');
-
-    if(Mensaje.value.trim() === ''){
-    const error = document.createElement('b');
-    error.innerText = "Ingrese un mensaje";
-    Mensaje.insertAdjacentElement("afterend", error);
-    valid = false;
-    }
-
-    if(valid) {
-      Swal.fire(
-        'Mensaje enviado!',
-        'Gracias por contactarse',
-        'success'
-      )
-      Mensaje.value = '';
-      Asunto.value = '';
-      Email.value = '';
-      Nombre.value = '';
-    }
-});
 
 !(function($) {
   "use strict";
@@ -127,7 +68,7 @@ form.addEventListener('submit', (evento) => {
     }
   });
 
-
+  // Navigation active state on scroll
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, .mobile-nav');
 
@@ -173,13 +114,7 @@ form.addEventListener('submit', (evento) => {
   });
 
 
-  $('.skills-content').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
+
 
 
   $(window).on('load', function() {
@@ -204,7 +139,7 @@ form.addEventListener('submit', (evento) => {
   });
 
 
-
+  // Portfolio details carousel
   $(".portfolio-details-carousel").owlCarousel({
     autoplay: true,
     dots: true,
@@ -212,7 +147,7 @@ form.addEventListener('submit', (evento) => {
     items: 1
   });
 
-
+  // Init AOS
   function aos_init() {
     AOS.init({
       duration: 1000,

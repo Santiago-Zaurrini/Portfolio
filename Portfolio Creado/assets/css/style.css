@@ -1,3 +1,8 @@
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -16,6 +21,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
   display: none;
@@ -43,6 +51,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.2s ease-in-out;
 }
 
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 #header {
   position: fixed;
   top: 0;
@@ -113,6 +124,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
 .nav-menu {
   padding-top: 30px;
 }
@@ -153,6 +168,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #149ddd;
 }
 
+/* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
@@ -184,6 +200,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
@@ -248,6 +267,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -285,7 +307,9 @@ section {
   margin-bottom: 0;
 }
 
-
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -311,6 +335,9 @@ section {
   margin-bottom: 0;
 }
 
+/*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
 .facts {
   padding-bottom: 30px;
 }
@@ -358,6 +385,9 @@ section {
   color: #1f5297;
 }
 
+/*--------------------------------------------------------------
+# Akills
+--------------------------------------------------------------*/
 .skills .progress {
   height: 50px;
   display: block;
@@ -390,6 +420,9 @@ section {
   background-color: #149ddd;
 }
 
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -448,6 +481,9 @@ section {
   border: 2px solid #1f5297;
 }
 
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
@@ -545,6 +581,9 @@ section {
   bottom: 0;
 }
 
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
 .services .icon-box {
   margin-bottom: 20px;
 }
@@ -908,20 +947,26 @@ b {
   color: red;
 }
 
-#enviar {
-	background: #B9DFFF;
-	color: #fff;
-  height: 50%;
-  width: 30%;
-	border: 2px solid #eee;
-	box-shadow: 5px 5px 5px #eee;
-	text-shadow: none;
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#enviar:hover {
-	background: #016ABC;
-	color: #fff;
-	border: 2px solid #eee;
-	box-shadow: 5px 5px 5px #eee;
-	text-shadow: none;
+
+.skill img {
+  width: 100%;
+  height: auto;
+  transform: scale(1); /* Escala inicial */
+  transition: transform 0.3s ease;
+}
+
+.skill:hover img {
+  transform: scale(1.1); /* Agranda la imagen al pasar el ratón sobre ella */
+}
+
+div.centrador {
+  display: flex;
+  justify-content: center;
 }
